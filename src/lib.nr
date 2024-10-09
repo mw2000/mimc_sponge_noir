@@ -6,9 +6,9 @@ use constants::get_c_partial;
 
 // log_5(21888242871839275222246405745257275088548364400416034343698204186575808495617) ~= 110
 // => nRounds should be 220
-global nRounds: Field = 220;
+global nRounds: u64 = 220;
 
-pub fn mimc_sponge<N, M>(ins: [Field; N], k: Field) -> [Field; M] {
+pub fn mimc_sponge<let N: u32, let M: u32>(ins: [Field; N], k: Field) -> [Field; M] {
     let mut S = MiMCFeistel(ins[0], 0, k); // First round with xL = ins[0] and xR = 0
 
     for i in 1..N {

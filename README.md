@@ -13,8 +13,13 @@ Before you can use this implementation, ensure you have the Noir language and it
 Once you have Noir set up, clone this repository to your local machine:
 
 ```bash
-git clone https://github.com/yourusername/mimc-sponge-noir.git
+git clone https://github.com/KumaCrypto/mimc_sponge_noir.git
 cd mimc-sponge-noir
+```
+
+To import this as a dependency in your noir project, please add this to your nargo`[dependencies]`. Replace the tag with the version you wish to use.
+```
+mimc_sponge = { tag = "v0.0.2", git = "https://github.com/KumaCrypto/mimc_sponge_noir" }
 ```
 
 ## Disclaimer
